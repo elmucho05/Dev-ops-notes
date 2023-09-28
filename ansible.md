@@ -85,11 +85,11 @@ A unit of code or binary that Ansible runs on managed nodes.
 - name: My first play
  	hosts: myhosts
 	tasks:
-		- name: Ping my hosts
-		ansible.builtin.ping:
-		- name: Print message
-		ansible.builtin.debug:
-			msg: Hello world
+	- name: Ping my hosts
+	ansible.builtin.ping:
+	- name: Print message
+	ansible.builtin.debug:
+		msg: Hello world
 ```
 
 2. Run your playbook.
