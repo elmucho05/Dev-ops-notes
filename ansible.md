@@ -80,16 +80,17 @@ A unit of code or binary that Ansible runs on managed nodes.
 *To create a playbook that pings your hosts and prints a “Hello world” message:*
 
 1. Create a file named `playbook.yaml` in your `ansible_quickstart` directory, that you created earlier, with the following content:
-
 ```yaml
 - name: My first play
- 	hosts: myhosts
+	hosts:myhosts
 	tasks:
-		- name: Ping my hosts
-		ansible.builtin.ping:
-		- name: Print message
-		ansible.builtin.debug:
-			msg: Hello world
+	- name: Ping my hosts
+	ansible.builtin.ping
+
+	-name: Print message
+	ansible.builtin.debug:
+		msg: Hello world
+
 ```
 
 2. Run your playbook.
